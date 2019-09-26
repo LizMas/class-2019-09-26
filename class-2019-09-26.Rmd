@@ -1,0 +1,23 @@
+---
+title: "class-2019-09-26"
+author: "Liz M."
+date: "9/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(gapminder)
+```
+```{r make_plot} 
+gapminder %>% filter(year == 1962) %>% 
+  
+  ggplot(aes(x = gdpPercap, y = lifeExp)) +
+  geom_point() +
+  scale_x_log10()
+
+```
+
+
